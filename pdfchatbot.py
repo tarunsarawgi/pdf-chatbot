@@ -14,6 +14,13 @@ load_dotenv()
 os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
+import langchain_community
+import faiss
+
+print(f"LangChain Community version: {langchain_community.__version__}")
+print(f"FAISS version: {faiss.__version__}")
+
+
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
